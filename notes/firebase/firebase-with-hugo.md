@@ -44,13 +44,17 @@ For creating a new Firebase project you can either use the [Firebase console](ht
 
 When using the Firebase console, you can create a new project at [https://console.firebase.google.com](https://console.firebase.google.com)
 
+![console](static/images/firebase-console.png)
+
 Click on "Add Project" and go through the project creation process. It's pretty straight forward.
 
 After your project is created you can open your terminal and run the following command 
 
 `firebase project:list` 
 
-Firebase lists all your created projects.
+Firebase lists all your created projects:
+
+![firebase-project-list](static/images/firebase-pojects-list.png)
 
 ### Initialize Firebase for your Hugo page 
 
