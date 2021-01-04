@@ -3,7 +3,7 @@ title: "How to use Firebase to host a Hugo site"
 sub_header: ""
 date: 2021-01-04T13:18:18+01:00
 tags: ["Firebase","Hugo"]
-draft: true
+draft: false
 toc: false
 ---
 
