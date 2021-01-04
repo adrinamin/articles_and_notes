@@ -40,23 +40,17 @@ First of all, what is a Firebase project? Google describes it as follows:
 
 Thus, keep in mind that Firebase is always directly connected to the Google Cloud.
 
-For creating a new Firebase project you can either use the [Firebase console](https://console.firebase.google.com/) or you use the Firebase CLI.
+For creating a new Firebase project you can either use the [Firebase console](https://console.firebase.google.com/) or you use the Firebase CLI:
 
-When using the Firebase console, you can create a new project at [https://console.firebase.google.com](https://console.firebase.google.com)
+* When using the Firebase console, you can create a new project at [https://console.firebase.google.com](https://console.firebase.google.com)
 
-<img src="../images/firebase-console.png"
-     alt="firebase console"/>
+* Click on "Add Project" and go through the project creation process. It's pretty straight forward.
 
-Click on "Add Project" and go through the project creation process. It's pretty straight forward.
+* After your project is created you can open your terminal and run the following command 
 
-After your project is created you can open your terminal and run the following command 
-
-`firebase project:list` 
-
-Firebase lists all your created projects:
-
-<img src="../images/firebase-pojects-list.png"
-     alt="firebase console"/>
+    `firebase project:list` 
+    
+    to list all your created projects.
 
 ### Initialize Firebase for your Hugo page 
 
