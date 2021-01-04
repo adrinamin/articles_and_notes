@@ -7,20 +7,20 @@ draft: true
 toc: false
 ---
 
-If you want to create blog or a personal website, and you want write your site using HTML, CSS and JavaScript, static site generators are a good way to create your site fast.
+If you want to create a blog or a personal website, and you want write your site using HTML, CSS and JavaScript, static site generators are a good way to create your site quickly.
 
 In this quick tutorial, I want to show you:
 
-1. **How to implement Firebase into your Hugo site?**
-2. **How to push your site to Firebase?**
-3. **How to implement the Firebase into your CI/CD using GitHub actions?**
+1. **How to implement Firebase into your Hugo site**
+2. **How to push your site to Firebase**
+3. **How to implement the Firebase into your CI/CD using GitHub actions**
 
 ## Quick Explanation about Hugo and Firebase
-Lately, I started to create my own web page. The page should only contain static content. Thus I decided to use a static site generator. 
+I recently started to create my own web page. I wanted the page to only contain static content. Thus, I decided to use a static site generator. 
 
-After looking for some site generators at [JAMstack](https://jamstack.org/generators/), I found [Hugo](https://gohugo.io/). A fast static site generator written in Go. It's been around for quite some time and it is very feature rich. 
+After looking for some site generators at [JAMstack](https://jamstack.org/generators/), I found [Hugo](https://gohugo.io/): A fast static site generator written in Go. It's been around for quite some time and it is very feature-rich. 
 
-After creating my static website the main question was, where to host the page. The Hugo documentation page offers tutorials for hosting a Hugo site to a variety of platforms including Firebase.
+After creating my static website the main question was where to host the page. The Hugo documentation page offers tutorials for hosting a Hugo site to a variety of platforms including Firebase.
 
 Firebase is a Backend-as-a-Service (BaaS) provided by Google. It supports multiple platforms like iOS, Android or Unity, and you can also host your web app or static website. It provides a free plan which is sufficient for smaller or personal projects (see the [pricing](https://firebase.google.com/pricing/)). 
 
@@ -28,13 +28,13 @@ To leverage the services from Firebase you only need a Google Account. Deploying
 
 ## 1. How to implement Firebase into your Hugo site?
 
-For this part, I'm expecting that you already have a running Hugo site. If not, check out the [Hugo Quick Start tutorial](https://gohugo.io/getting-started/quick-start/).
+For this part, You should already have a running Hugo site. If not, check out the [Hugo Quick Start tutorial](https://gohugo.io/getting-started/quick-start/).
 
 Firebase contains a CLI which you can install on your local machine using a _npm_, a _standalone binary_ or an _auto install script_ (see the [Firebase documentation](https://firebase.google.com/docs/cli/)). The Firebase CLI provides full capabilities to work with your resources.
 
 ### Create a new Firebase project
 
-First of all what is a Firebase project? Google describes it as follows:
+First of all, what is a Firebase project? Google describes it as follows:
 
 > _When you create a new Firebase project in the Firebase console, you're actually creating a Google Cloud project behind the scenes. You can think of a Google Cloud project as a virtual container for data, code, configuration, and services. A Firebase project is a Google Cloud project that has additional Firebase-specific configurations and services._
 
@@ -54,19 +54,19 @@ Firebase lists all your created projects.
 
 ### Initialize Firebase for your Hugo page 
 
-Navigate into your Hugo project first. Firebase provides an easy step-by-step process for setting up a Firebase project. For that just run following command:
+Firebase provides an easy step-by-step process for setting up a Firebase project. In your Hugo project run following command:
 
 `firebase init`
 
-A menu appears where you can select a Firebase feature. Here, you select the "Hosting".
+A menu appears where you can select a Firebase feature. Here, you select  "Hosting".
 
 Then the initialization process starts:
 
-1. First we choose the previously created project by selecting the menu point **_Use an existing project_**. If you haven't created a new Firebase project yet, you can create with the Firebase CLI by running following command:
+1. First, we choose the previously created project by selecting the menu point **_Use an existing project_**. If you haven't created a new Firebase project yet, you can create it with the Firebase CLI by running following command:
 
     `projects:create [options] [projectId]`
 
-2. After that you define which folder should be the public directory for your Firebase project. If you already navigated to the corresponding folder, just press enter. 
+2. After that, you define which folder should be the public directory for your Firebase project. If you already navigated to the corresponding folder, just press enter. 
 
 3. Firebase also wants to know whether your site should be configured as a single-page app. For our Hugo site you respond with "No". 
 
@@ -94,14 +94,14 @@ The names of those files might vary for you. The content of both files is the sa
 
 Notice that I divided everything in separate steps to have a better overview of the entire process. 
 
-I setup Hugo with the action [peaceiris/actions-hugo](https://github.com/peaceiris/actions-hugo). The build step afterwards runs the command
+I set up Hugo with the action [peaceiris/actions-hugo](https://github.com/peaceiris/actions-hugo). The build step afterwards runs the command
 
 `hugo --minify`
 
-Here your page is generated by Hugo. We also add the `--minify` option to decrease the file sizes of any supported output format. If you need to change the working directory, you can do that with the `working-directory` keyword. The rest of the script can stay as generated by the Firebase CLI.
+Here, your page is generated by Hugo. We also add the `--minify` option to decrease the file sizes of any supported output format. If you need to change the working directory, do so with the `working-directory` keyword. The rest of the script can remain as generated by the Firebase CLI.
 
 ## Conclusion
 
-Hosting your static site on Firebase is straight-forward and easy. You can host your site in minutes on Firebase and the free plan is sufficient enough for smaller to medium workload. Just keep in mind to adjust the generated workflow files for Hugo otherwise the script might not work out of the box. What's your experience with Firebase? Do you host your static site there as well? I'm happy to hear your feedback. 
+Hosting your static site on Firebase is straight-forward and easy. You can host your site in minutes on Firebase and the free plan is sufficient for smaller to medium workload. Just keep in mind to adjust the generated workflow files for Hugo, otherwise the script might not work out of the box. What's your experience with Firebase? Do you host your static site there as well? I'm keen to hear your feedback. 
 
 
